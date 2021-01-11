@@ -1,0 +1,270 @@
+/* z-index 默认1 遮罩2 遮罩上3 */
+/* css完美过渡时间0.3s */
+
+/* 自定义变量 */
+:root {
+  --color: rgba(0, 0, 0, 0.85);
+  --color-primary: rgba(24, 144, 255, 1);
+  --color-success: rgba(103, 194, 58, 1);
+  --color-warning: rgba(230, 162, 60, 1);
+  --color-danger: rgba(245, 108, 108, 1);
+  --color-fff: rgba(255, 255, 255, 1);
+  --color-title: rgba(0, 0, 0, 0.85);
+  --color-text: rgba(0, 0, 0, 0.65);
+  --color-text2: rgba(0, 0, 0, 0.45);
+  --color-disable: rgba(0, 0, 0, 0.25);
+  --color-border: rgba(0, 0, 0, 0.15);
+  --color-dividers: rgba(0, 0, 0, 0.06);
+  --color-background: rgba(0, 0, 0, 0.04);
+  --color-tableHeader: rgba(0, 0, 0, 0.02);
+  --color-track: rgba(24, 144, 255, 0.2);
+  --fs-8: 8px;
+  --fs-12: 12px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-24: 24px;
+}
+
+/* 全部 */
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+/* 去除列表样式 */
+ul,
+li {
+  list-style: none;
+}
+
+/*表格默认样式*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  caption-side: top;
+  empty-cells: hide;
+  table-layout: fixed;
+}
+
+body {
+  /* 使用系统字体 */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-size: var(--fs-16);
+  text-align: left;
+  color: var(--color);
+  background-color: var(--color-background);
+  height: 100vh;
+}
+
+/* 选择文本背景色 */
+::selection {
+  background-color: var(--color-primary);
+}
+
+.user-select {
+  user-select: none;
+}
+
+/* 滚条样式 */
+::-webkit-scrollbar {
+  width: var(--fs-12);
+  height: var(--fs-12);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--color-track);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+}
+
+/* 文字超出宽度显示省略号 */
+.truncate-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* 图片显示在容器中间 */
+.image-contain {
+  object-fit: contain;
+  object-position: center;
+}
+
+/* 图片覆盖容器 */
+.image-cover {
+  object-fit: cover;
+  object-position: right top;
+}
+
+/* 字体大小 */
+.fs-12 {
+  font-size: var(--fs-12);
+}
+.fs-14 {
+  font-size: var(--fs-14);
+}
+.fs-16 {
+  font-size: var(--fs-16);
+}
+.fs-18 {
+  font-size: var(--fs-18);
+}
+
+/* 字体对齐方式 */
+.tc {
+  text-align: center;
+}
+.tl {
+  text-align: left;
+}
+.tr {
+  text-align: right;
+}
+
+/* 颜色 */
+.color-primary {
+  color: var(--color-primary);
+}
+.color-success {
+  color: var(--color-success);
+}
+.color-warning {
+  color: var(--color-warning);
+}
+.color-danger {
+  color: var(--color-danger);
+}
+.color-fff {
+  color: var(--color-fff);
+}
+.color-title {
+  color: var(--color-title);
+}
+.color-text {
+  color: var(--color-text);
+}
+.color-text2 {
+  color: var(--color-text2);
+}
+.color-disable {
+  color: var(--color-disable);
+}
+.color-border {
+  color: var(--color-border);
+}
+.color-dividers {
+  color: var(--color-dividers);
+}
+.color-background {
+  color: var(--color-background);
+}
+.color-tableheader {
+  color: var(--color-tableHeader);
+}
+
+/* 外边距 */
+.mr-8 {
+  margin-right: var(--fs-8);
+}
+.mb-8 {
+  margin-bottom: var(--fs-8);
+}
+.ml-8 {
+  margin-left: var(--fs-8);
+}
+.mt-8 {
+  margin-top: var(--fs-8);
+}
+.ml-16 {
+  margin-left: var(--fs-16);
+}
+.mr-16 {
+  margin-right: var(--fs-16);
+}
+.mt-16 {
+  margin-top: var(--fs-16);
+}
+.mb-16 {
+  margin-bottom: var(--fs-16);
+}
+.mt-24 {
+  margin-top: var(--fs-24);
+}
+.mr-24 {
+  margin-right: var(--fs-24);
+}
+.mb-24 {
+  margin-bottom: var(--fs-24);
+}
+.ml-24 {
+  margin-left: var(--fs-24);
+}
+
+/* 其他 */
+.hidden {
+  display: none;
+}
+.block {
+  display: block;
+}
+.pointer {
+  cursor: pointer;
+}
+.border-bottom {
+  border-bottom: 1px solid var(--color-border);
+}
+.bold {
+  font-weight: 600;
+}
+.underline {
+  text-decoration: underline;
+}
+
+/* flex布局 */
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+.flex-center-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+.flex-around-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* 浮动 */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
