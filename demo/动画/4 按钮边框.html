@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>demo</title>
+    <style>
+        button {
+            width: 200px;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: yellowgreen;
+            margin: 100px;
+            position: relative;
+        }
+
+        button::before,
+        button::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background-color: yellowgreen;
+            transition: all 0.3s;
+        }
+
+        button::before {
+            right: 0;
+            top: -5px;
+        }
+
+        button::after {
+            left: 0;
+            bottom: -5px;
+        }
+
+        button:hover::before,
+        button:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <button></button>
+</body>
+
+</html>

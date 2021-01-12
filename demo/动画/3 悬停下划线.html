@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>demo</title>
+    <style>
+        p {
+            position: relative;
+            display: inline-block;
+        }
+
+        p::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            height: 2px;
+            width: 100%;
+            background-color: blueviolet;
+            transform: scaleX(0);
+            transform-origin: bottom left;
+            transition: all 0.3s;
+        }
+
+        p:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom right;
+        }
+    </style>
+</head>
+
+<body>
+    <p>余欲御风而行，扶摇直上，逍遥于九重天外。然，不得法。以纸为飞马，东临蓬莱，诣庄周所</p>
+</body>
+
+</html>

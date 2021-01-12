@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>demo</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to right, #c94b4b, #4b134f);
+            position: relative;
+            z-index: 1;
+        }
+
+        div::before {
+            content: '';
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to right, #c94b4b, #4b134f);
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

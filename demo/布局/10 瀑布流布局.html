@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>demo</title>
+    <style>
+        /* 瀑布流的意思是等宽不等高，或者，等高不等宽 */
+
+        .flow-wrap {
+            width: 50%;
+            margin: 0 auto;
+            --column-count-small: 1;
+            --column-count-medium: 2;
+            --column-count-large: 3;
+            --column-gap: 0.125rem;
+            padding: var(--column-gap);
+        }
+
+
+        .flow-columns {
+            column-gap: var(--column-gap);
+            column-count: var(--column-count-small);
+            column-width: calc(1 / var(--column-count-small) * 100%);
+        }
+
+        @media only screen and (min-width: 640px) {
+            .flow-columns {
+                column-count: var(--column-count-medium);
+                column-width: calc(1 / var(--column-count-medium) * 100%);
+            }
+        }
+
+        @media only screen and (min-width: 800px) {
+            .flow-columns {
+                column-count: var(--column-count-large);
+                column-width: calc(1 / var(--column-count-large) * 100%);
+            }
+        }
+
+
+        .item {
+            width: 100%;
+            height: auto;
+            margin: var(--column-gap) 0;
+            display: block;
+        }
+
+        .item:first-child {
+            margin: 0 0 var(--column-gap);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flow-wrap">
+        <div class="flow-columns">
+            <img class="item"
+                src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1510416263,3095872003&fm=26&gp=0.jpg"
+                alt="An image" />
+            <img class="item"
+                src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1863781907,420746829&fm=26&gp=0.jpg"
+                alt="Another image" />
+            <img class="item"
+                src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3153405721,1524067674&fm=26&gp=0.jpg"
+                alt="Another image" />
+            <img class="item"
+                src="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3149938290,1499572739&fm=26&gp=0.jpg"
+                alt="One more image" />
+            <img class="item"
+                src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2753268828,1450002032&fm=26&gp=0.jpg"
+                alt="And another one" />
+            <img class="item"
+                src="https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1515661097,810733843&fm=26&gp=0.jpg"
+                alt="Last one" /><img class="item"
+                src="https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1510416263,3095872003&fm=26&gp=0.jpg"
+                alt="An image" />
+
+        </div>
+    </div>
+</body>
+
+</html>

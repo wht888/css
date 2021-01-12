@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>demo</title>
+    <style>
+        .menu {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .menu div {
+            height: 5px;
+            background-color: black;
+            transition: all 0.3s;
+            transform-origin: left;
+            margin: 11px 0;
+        }
+
+        .menu:hover div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu:hover div:first-child {
+            transform: rotate(45deg);
+        }
+
+        .menu:hover div:last-child {
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>
