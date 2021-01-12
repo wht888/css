@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>demo</title>
+    <style>
+        ul {
+            counter-reset: counter;
+            list-style: none;
+        }
+
+
+        li::before {
+            counter-increment: counter;
+            content: counters(counter, '.') ' ';
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>111
+            <ul>
+                <li>aaa</li>
+                <li>bbb</li>
+            </ul>
+        </li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+    </ul>
+</body>
+
+</html>

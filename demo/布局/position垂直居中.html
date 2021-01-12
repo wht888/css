@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>布局position垂直居中</title>
+    <style>
+        .parent {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .child {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <span class="child">hello world</span>
+    </div>
+</body>
+
+</html>

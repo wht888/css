@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>demo</title>
+    <style>
+        div {
+            height: 100px;
+            margin: 200px;
+            position: relative;
+            border: 1px salmon solid;
+        }
+
+        div::before,
+        div::after {
+            content: '';
+            position: absolute;
+            left: 100px;
+            bottom: 100%;
+            width: 0;
+            height: 0;
+            border-bottom: 20px solid salmon;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+        }
+
+        div::after {
+            left: 101px;
+            border-bottom: 19px solid #fff;
+            border-left: 19px solid transparent;
+            border-right: 19px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
