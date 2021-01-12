@@ -5,11 +5,40 @@
     <meta charset="utf-8" />
     <title>demo</title>
     <style>
+        .wrap {
+            width: 200px;
+            overflow-x: scroll;
+            margin: 100px;
+            transform: rotateX(180deg);
+        }
+
+        .wrap .content {
+            width: 100vw;
+            transform: rotateX(180deg);
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: rgba(161, 16, 125, 0.2);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: rgb(161, 16, 125);
+        }
     </style>
 </head>
 
 <body>
-
+    <div class="wrap">
+        <div class="content">
+            <div>自定义滚动条</div>
+            <div>把滚动条写在顶部</div>
+        </div>
+    </div>
 </body>
 
 </html>
