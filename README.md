@@ -1,8 +1,7 @@
 ```
 有朋自远方来,不亦乐乎
 你好，我是王海涛
-对本项目有建议或疑问的朋友可以联系我
-交朋友可以联系我
+You can contact me
 手机号（微信）：15890105014
 ```
 
@@ -242,3 +241,33 @@ min-width
 - grid-column grid-row
 - grid-area
 - justify-self align-self place-self
+
+## 选择器
+
+- :root 选择文档根元素
+- \*
+- .class
+- element
+- element,element
+- element element
+- element>element 选择子元素
+- element+element 选择相邻元素
+- :link
+- :visited
+- :active
+- :hover
+- :focus
+- :before
+- :after
+- :first-child
+- :nth-child(n)
+- :last-child
+- :enabled
+- :disabled
+- :checked
+- :not(selector)
+- ::selection
+- [attribute]
+- [attribute=value]
+- [attribute~=value]
+- [attribute|=value]
