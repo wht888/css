@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>demo</title>
+    <style>
+        @keyframes loading {
+
+            100% {
+                transform: translateY(-100%);
+                opacity: 0.1;
+            }
+        }
+
+        .loading {
+            margin: 200px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .loading div {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: tomato;
+            margin: 0 5px;
+            animation: loading 0.6s infinite alternate;
+        }
+
+        .loading div:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .loading div:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>
