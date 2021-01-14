@@ -1,4 +1,4 @@
-/* z-index 默认1 遮罩2 遮罩上3 */
+/* z-index 默认1 蒙层2 蒙层上3 */
 /* css完美过渡时间0.3s */
 /* 行高建议1.618em */
 /* 自定义变量 */
@@ -21,12 +21,18 @@
   --color-track: rgba(24, 144, 255, 0.2);
 
   /* 字体大小 */
-  --fs-8: 8px;
-  --fs-12: 12px;
-  --fs-14: 14px;
-  --fs-16: 16px;
-  --fs-18: 18px;
-  --fs-24: 24px;
+  --fs-mini: 12px;
+  --fs-small: 14px;
+  --fs-default: 16px;
+  --fs-large: 18px;
+
+  /* 边距 */
+  --mg-small: 8px;
+  --mg-default: 16px;
+  --mg-large: 24px;
+
+  /* 滚动条宽高 */
+  --scroll-width:12px;
 
   /* 过渡，加速 cubic-bezier(0.42, 0, 1.0, 1.0) */
   --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
@@ -82,7 +88,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-size: var(--fs-16);
+  font-size: var(--fs-default);
   text-align: left;
   color: var(--color);
   background-color: var(--color-background);
@@ -116,8 +122,8 @@ table {
 
 /* 滚条样式 */
 ::-webkit-scrollbar {
-  width: var(--fs-12);
-  height: var(--fs-12);
+  width: var(--scroll-width);
+  height: var(--scroll-width);
 }
 
 ::-webkit-scrollbar-track {
@@ -148,17 +154,17 @@ table {
 }
 
 /* 字体大小 */
-.fs-12 {
-  font-size: var(--fs-12);
+.fs-mini {
+  font-size: var(--fs-mini);
 }
-.fs-14 {
-  font-size: var(--fs-14);
+.fs-small {
+  font-size: var(--fs-small);
 }
-.fs-16 {
-  font-size: var(--fs-16);
+.fs-default {
+  font-size: var(--fs-default);
 }
-.fs-18 {
-  font-size: var(--fs-18);
+.fs-large {
+  font-size: var(--fs-large);
 }
 
 /* 字体对齐方式 */
@@ -215,40 +221,40 @@ table {
 
 /* 外边距 */
 .mr-8 {
-  margin-right: var(--fs-8);
+  margin-right: var(--mg-small);
 }
 .mb-8 {
-  margin-bottom: var(--fs-8);
+  margin-bottom: var(--mg-small);
 }
 .ml-8 {
-  margin-left: var(--fs-8);
+  margin-left: var(--mg-small);
 }
 .mt-8 {
-  margin-top: var(--fs-8);
+  margin-top: var(--mg-small);
 }
 .ml-16 {
-  margin-left: var(--fs-16);
+  margin-left: var(--mg-default);
 }
 .mr-16 {
-  margin-right: var(--fs-16);
+  margin-right: var(--mg-default);
 }
 .mt-16 {
-  margin-top: var(--fs-16);
+  margin-top: var(--mg-default);
 }
 .mb-16 {
-  margin-bottom: var(--fs-16);
+  margin-bottom: var(--mg-default);
 }
 .mt-24 {
-  margin-top: var(--fs-24);
+  margin-top: var(--mg-large);
 }
 .mr-24 {
-  margin-right: var(--fs-24);
+  margin-right: var(--mg-large);
 }
 .mb-24 {
-  margin-bottom: var(--fs-24);
+  margin-bottom: var(--mg-large);
 }
 .ml-24 {
-  margin-left: var(--fs-24);
+  margin-left: var(--mg-large);
 }
 
 /* 其他 */
