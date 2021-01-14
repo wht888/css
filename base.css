@@ -285,6 +285,10 @@ table {
   display: flex;
   justify-content: center;
 }
+.flex-start-center {
+  display: flex;
+  align-items: center;
+}
 .flex-center-center {
   display: flex;
   justify-content: center;
